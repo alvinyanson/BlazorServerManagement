@@ -1,6 +1,6 @@
 ﻿
 <p>
-    @Server.Name is in @Server.City
+    @Server.Name is in @Server.City that is <span style="color:@(Server.IsOnline ? "green" : "red")">@(Server.IsOnline ? "online" : "offline")</span>
 </p>
 
 @code {
