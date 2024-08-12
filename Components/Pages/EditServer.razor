@@ -2,13 +2,28 @@
 
 <h3>EditServer</h3>
 
-@if(Server != null)
+@if (Server != null)
 {
-    <p>
-        @Server.Name - @Server.City - @Server.IsOnline
-    </p>
+
+    <EditForm Model="Server">
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <InputText @bind-Value="Server.Name" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">City</label>
+            <InputText @bind-Value="Server.City" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Status</label>
+            <InputCheckbox @bind-Value="Server.IsOnline" class="form-check-input" />
+        </div>
+
+    </EditForm>
 }
-<br/>
+<br />
 
 <a href="/servers" class="btn btn-primary">Back</a>
 
